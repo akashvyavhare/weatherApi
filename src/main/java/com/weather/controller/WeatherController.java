@@ -16,9 +16,8 @@ public class WeatherController {
 	
 	
 	@GetMapping(value = "/current")
-	public void getWeather(@RequestParam String city) {
-		System.out.println("Api call....with For city = "+city);
-		weatherService.getCurrentWeather(city);
+	public String getWeather(@RequestParam String city) {
+		return weatherService.getCurrentWeather(city);
 	}
 
 }
